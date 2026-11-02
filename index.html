@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harlan &amp; Sons Barbers | Leeds</title>
+<meta name="description" content="Traditional cuts, fades and hot towel shaves in Chapeltown, Leeds. Walk-ins welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+/* ===== EDIT THESE FOR EACH CLIENT ===== */
+:root{
+  --navy:#14243b; --red:#c8372d; --paper:#eef1f3; --ink:#1b2430; --white:#fff;
+  --display:'Archivo Black','Arial Black',Impact,sans-serif;
+  --body:'Archivo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{--paper:#0f1a2b; --ink:#e8edf2}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+
+/* top bar */
+header{background:var(--navy);color:var(--white)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
+.logo{font-family:var(--display);font-size:1.15rem;text-decoration:none}
+header a.call{background:var(--red);color:var(--white);text-decoration:none;font-weight:600;padding:9px 16px;border-radius:6px;font-size:.95rem}
+
+/* hero with barber-pole band */
+.hero{background:var(--navy);color:var(--white);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 90px;gap:28px;align-items:stretch;padding-top:56px;padding-bottom:64px}
+.hero h1{font-family:var(--display);font-size:clamp(2.4rem,7.5vw,4.6rem);line-height:1.02;letter-spacing:-.01em;max-width:11ch}
+.hero p{margin-top:20px;max-width:34ch;font-size:1.1rem;opacity:.9}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:14px 22px;border-radius:6px;font-weight:600;text-decoration:none}
+.btn.red{background:var(--red);color:var(--white)}
+.btn.line{border:2px solid rgba(255,255,255,.55);color:var(--white)}
+.pole{border-radius:45px;border:3px solid rgba(255,255,255,.85);min-height:260px;
+  background:repeating-linear-gradient(135deg,var(--red) 0 22px,var(--white) 22px 44px,#2f5fa8 44px 66px,var(--white) 66px 88px);
+  background-size:100% 176px;animation:spin 2.4s linear 1 both}
+@keyframes spin{from{background-position:0 0}to{background-position:0 176px}}
+@media (prefers-reduced-motion:reduce){.pole{animation:none}}
+
+section{padding:56px 0}
+h2{font-family:var(--display);font-size:1.9rem;margin-bottom:22px;line-height:1.15}
+
+/* price list */
+.prices{list-style:none;max-width:560px}
+.prices li{display:flex;align-items:baseline;gap:10px;padding:12px 0;border-bottom:1px solid rgba(128,140,155,.35)}
+.prices .dots{flex:1;border-bottom:2px dotted rgba(128,140,155,.6);transform:translateY(-4px)}
+.prices b{font-weight:800}
+.note{margin-top:14px;opacity:.75;font-size:.95rem}
+
+/* info grid */
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(128,140,155,.3);max-width:340px}
+address{font-style:normal}
+.map{display:block;margin-top:14px;font-weight:600;color:var(--red)}
+
+footer{background:var(--navy);color:var(--white);padding:30px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+@media (max-width:560px){
+  .hero .wrap{grid-template-columns:1fr 54px;padding-top:40px;padding-bottom:44px}
+  .pole{border-radius:27px;min-height:200px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Harlan &amp; Sons</a>
+    <a class="call" href="tel:+441130000000">Call 0113 000 0000</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Sharp cuts. Clean shaves.</h1>
+        <p>Family-run barbers on Chapeltown Road, Leeds. Walk-ins welcome, appointments if you'd rather skip the wait.</p>
+        <div class="btns">
+          <a class="btn red" href="https://wa.me/441130000000?text=Hi%2C%20I%27d%20like%20to%20book%20a%20cut">Book on WhatsApp</a>
+          <a class="btn line" href="#prices">See prices</a>
+        </div>
+      </div>
+      <div class="pole" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <section id="prices">
+    <div class="wrap">
+      <h2>Prices</h2>
+      <ul class="prices">
+        <li><span>Men's haircut</span><span class="dots"></span><b>£15</b></li>
+        <li><span>Skin fade</span><span class="dots"></span><b>£18</b></li>
+        <li><span>Beard trim</span><span class="dots"></span><b>£8</b></li>
+        <li><span>Hot towel shave</span><span class="dots"></span><b>£15</b></li>
+        <li><span>Cut and beard</span><span class="dots"></span><b>£22</b></li>
+        <li><span>Kids cut (under 12)</span><span class="dots"></span><b>£11</b></li>
+      </ul>
+      <p class="note">Cash and card accepted.</p>
+    </div>
+  </section>
+
+  <section id="visit" style="padding-top:0">
+    <div class="wrap info">
+      <div>
+        <h2>Opening hours</h2>
+        <ul class="hours">
+          <li><span>Mon to Fri</span><span>9:00 to 18:30</span></li>
+          <li><span>Saturday</span><span>8:30 to 17:30</span></li>
+          <li><span>Sunday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Find us</h2>
+        <address>Harlan &amp; Sons Barbers<br>158 Chapeltown Road<br>Leeds LS7 4HP</address>
+        <p style="margin-top:10px">0113 000 0000</p>
+        <a class="map" href="https://www.google.com/maps/search/?api=1&query=158+Chapeltown+Road+Leeds">Open in Google Maps</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; Harlan &amp; Sons Barbers</span>
+    <span>Website by Zaid</span>
+  </div>
+</footer>
+
+</body>
+</html>
